@@ -1,0 +1,15 @@
+apiVersion: v1
+#"kind" refers to type of object we are trying to create.
+kind: Pod
+#Metadata is data about the object.
+#Under metadata we can add only name and labels, 
+#but under labels we can add anything(any key name and value) we expect.
+metadata:
+  name: nginx-pod
+  labels:
+      app: nginx-app
+      type: front-end
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
